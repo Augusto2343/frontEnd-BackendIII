@@ -4,7 +4,7 @@ export const PetsContext = createContext()
 const PetContextProvider = ({children}) =>{
     const getPets = async() =>{
         try {
-            const response = await fetch("hearty-trust-production-873e.up.railway.app/api/pets",{
+            const response = await fetch(`${import.meta.env.VITE_BACK_URL}`,{
                 method:"GET"
             })
             if(!response.ok) return Swal.fire({icon:"error",title:"No se pudo obtener las mascotas"})
