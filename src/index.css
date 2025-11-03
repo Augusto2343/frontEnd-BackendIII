@@ -5,7 +5,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -53,7 +52,38 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+.inactive{
+  transform-origin: top;
+  animation: ocultar 0.5s;
+  transform: scaleY(0);
+  opacity: 0;
+}
+.active{
+  transform-origin: top;
+  animation:despleg 0.5s;
+  transform: scaleY(1);
+  opacity: 1;
+}
+@keyframes despleg {
+  0%{
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes ocultar {
+  0%{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

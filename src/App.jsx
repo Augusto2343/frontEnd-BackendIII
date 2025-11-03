@@ -9,10 +9,14 @@ import PetsControl from './components/PetsControl'
 import MocksControl from './components/MocksControl'
 import UserControl from './components/UserControl'
 import PetContextProvider from './components/context/petsContext'
+import UserContextProvider from './components/context/UsersContext'
+import MockContextProvider from './components/context/MockingContext'
 function App() {
   
   return (
     <>
+    <MockContextProvider>
+    <UserContextProvider>
     <PetContextProvider>
     <Navbar></Navbar>
       <Routes>
@@ -23,6 +27,8 @@ function App() {
         <Route path={"/*"}></Route>
       </Routes>
       </PetContextProvider>
+      </UserContextProvider>
+      </MockContextProvider>
     </>
   )
 }
