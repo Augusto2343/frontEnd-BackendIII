@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { PetsContext } from './context/petsContext';
+import { PetsContext } from './context/PetsContext';
 import { UsersContext } from './context/UsersContext';
 const PetsControl = () =>{
     const [pets,setPets] = useState();
