@@ -8,7 +8,7 @@ import Inicio from './components/Inicio'
 import PetsControl from './components/PetsControl'
 import MocksControl from './components/MocksControl'
 import UserControl from './components/UserControl'
-import PetContextProvider from './components/context/petsContext'
+import PetContextProvider from './components/context/PetsContext'
 import UserContextProvider from './components/context/UsersContext'
 import MockContextProvider from './components/context/MockingContext'
 function App() {
